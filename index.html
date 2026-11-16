@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+   
+   <head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Viboras Negras de Mbam CDO - Oficial</title>
+<style>
+  body{margin:0;font-family:sans-serif;background:#111;color:#222;scroll-behavior:smooth}
+  #login{height:100vh;display:flex;align-items:center;justify-content:center;background:radial-gradient(circle,#ffcc00,#111)}
+  .login-box{background:white;padding:40px;border-radius:20px;text-align:center;box-shadow:0 20px 50px rgba(0,0,0,0.5);max-width:350px}
+  .login-box img{width:120px;height:120px;border-radius:50%;border:4px solid #ffcc00}
+  nav{background:#111;color:#ffcc00;padding:12px 20px;display:flex;justify-content:space-between;align-items:center;position:sticky;top:0;z-index:100;border-bottom:3px solid #ffcc00}
+  nav strong{color:#ffcc00;font-size:18px}
+  .dropdown{position:relative} .dropbtn{background:#ffcc00;color:#111;padding:10px 20px;border:none;border-radius:8px;cursor:pointer;font-weight:bold}
+  .dropdown-content{display:none;position:absolute;right:0;background:white;min-width:240px;box-shadow:0 8px 16px rgba(0,0,0,0.3);border-radius:8px;overflow:hidden;z-index:101}
+  .dropdown-content a{color:#111;padding:12px 16px;display:block;text-decoration:none;font-weight:bold} .dropdown-content a:hover{background:#ffcc00}
+  .dropdown:hover .dropdown-content{display:block}
+  header{background:linear-gradient(135deg,#111,#222);color:#ffcc00;text-align:center;padding:50px 20px;border-bottom:4px solid #ffcc00}
+  header img{width:160px;height:160px;border-radius:50%;border:5px solid #ffcc00;background:white}
+  .container{max-width:1100px;margin:20px auto;padding:20px} .card{background:white;border-radius:16px;padding:25px;margin-bottom:30px;box-shadow:0 10px 30px rgba(0,0,0,0.3);border-left:6px solid #ffcc00}
+  .grid-players{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:20px}
+  .player{background:white;border-radius:16px;overflow:hidden;box-shadow:0 10px 20px rgba(0,0,0,0.2);text-align:center;border:2px solid #111;transition:0.3s}
+  .player:hover{transform:translateY(-5px);border-color:#ffcc00}
+  .player img{width:100%;height:220px;object-fit:cover;background:#eee}
+  .player-info{padding:15px}
+  .player-info h3{margin:5px 0}
+  .btn-more{background:#111;color:#ffcc00;border:none;padding:8px 15px;border-radius:20px;cursor:pointer;margin-top:8px;font-weight:bold}
+  .btn-more:hover{background:#ffcc00;color:#111}
+  .modal{display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.8);z-index:200;align-items:center;justify-content:center}
+  .modal-content{background:white;padding:25px;border-radius:16px;max-width:400px;width:90%;text-align:center;border:4px solid #ffcc00}
+  #contenido{display:none;background:#f5f5f5;min-height:100vh}
+  /* RESPONSIVE - SE AJUSTA A CUALQUIER DISPOSITIVO */
+@media (max-width: 768px){
+  nav{flex-direction:column;gap:10px;padding:10px}
+  header h1{font-size:22px}
+  header img{width:120px;height:120px}
+  .container{padding:10px}
+  .grid-players{grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:12px}
+  .player img{height:160px}
+  .login-box{width:90%;padding:25px}
+  footer div div{flex-direction:column;gap:5px}
+}
+
+@media (max-width: 480px){
+  .grid-players{grid-template-columns:1fr 1fr}
+  .player-info h3{font-size:14px}
+  .btn-more{font-size:12px;padding:6px 10px}
+  header{padding:30px 15px}
+}
+</style>
+</head>
+<body>
+
+<div id="login">
+  <div class="login-box">
+    <img src="./6ac8fcbd-d474-4c10-b4eb-7141ebd9320f.JPG" onerror="this.src='https://via.placeholder.com/120?text=VB'">
+    <h2>VIBORAS NEGRAS</h2>
+    <p style="margin-top:-10px"><b>DE MBAM CDO</b><br>Acceso privado del equipo</p>
+    <input type="password" id="pass" placeholder="Contraseña" style="padding:12px;width:90%;border-radius:8px;border:1px solid #ccc;margin-top:15px">
+    <br><br>
+    <button onclick="entrar()" style="background:#111;color:#ffcc00;border:none;padding:12px 20px;border-radius:8px;cursor:pointer;width:100%;font-weight:bold">ENTRAR</button>
+    <p id="error" style="color:red;display:none;margin-top:10px">Contraseña incorrecta
+  </div>
+</div>
+
+<div id="contenido">
+<nav>
+  <strong> VIBORAS NEGRAS</strong>
+  <div class="dropdown">
+    <button class="dropbtn">☰ MENÚ ▼</button>
+    <div class="dropdown-content">
+      <a href="#inicio">🏠 Inicio</a>
+      <a href="#nosotros">👥 Nosotros</a>
+      <a href="#equipajes">👕 Nuestros Equipajes</a>
+      <a href="#jugadores">⚽ Jugadores</a>
+      <a href="#directiva">🏆 Cuadro Directivos</a>
+    </div>
+  </div>
+</nav>
+
+<header id="inicio">
+  <img src="./6ac8fcbd-d474-4c10-b4eb-7141ebd9320f.JPG" onerror="this.src='https://via.placeholder.com/160?text=VB'">
+  
+  <h2> VIBORAS NEGRAS DE MBAM CDO</h2>
+  <p>Confianza • Fuerza • Victoria</p>
+</header>
+
+<div class="container">
+
+  <div id="nosotros" class="card">
+    <h2>👥 Nosotros</h2>
+    <p>Somos <b>Viboras Negras de Mbam CDO</b>, un equipo con garra, disciplina y pasión por el fútbol. Nuestro objetivo es formar jugadores fuertes y representar a Mbam con orgullo.</p>
+    <p><b>Fundación:</b> 2024 | <b>Colores:</b> Negro y Amarillo | <b>Lema:</b> Atacamos juntos, ganamos juntos</p>
+    <textarea style="width:100%;height:80px;padding:10px;border-radius:8px;border:1px solid #ddd" placeholder="Escribe aquí la historia del club..."></textarea>
+  </div>
+  <div id="directiva" class="card">
+  <h2>🏆 Cuadro Directivo - Víboras Negras</h2>
+  <p>Personas que dirigen y hacen grande al club</p>
+  
+  <div class="grid-players" id="directiva-grid"></div>
+</div>
+
+<script>
+// CUADRO DIRECTIVO - 10 PERSONAS
+const cargos = [
+  {cargo:"Presidente", nombre:"Presidente del Club", dorsal:"Presidencia"},
+  {cargo:"Vicepresidente", nombre:"Vicepresidente", dorsal:"Vice"},
+  {cargo:"Secretario General", nombre:"Secretario", dorsal:"SG"},
+  {cargo:"Tesorero", nombre:"Tesorero del Club", dorsal:"TS"},
+  {cargo:"Director Técnico", nombre:"Entrenador Principal", dorsal:"DT"},
+  {cargo:"Asistente Técnico", nombre:"2do Entrenador", dorsal:"AT"},
+  {cargo:"Delegado del Equipo", nombre:"Delegado", dorsal:"DEL"},
+  {cargo:"Responsable Médico", nombre:"Médico / Fisio", dorsal:"MED"},
+  {cargo:"Responsable Material", nombre:"Utilero", dorsal:"MAT"},
+  {cargo:"Comunicación y Prensa", nombre:"Prensa", dorsal:"PRENSA"}
+];
+
+const gridDirectiva = document.getElementById('directiva-grid');
+cargos.forEach((c,i)=>{
+  let id = 101 + i;
+  let div = document.createElement('div');
+  div.className='player';
+  div.style.borderColor='#ffcc00';
+  div.innerHTML=`
+    <img id="foto-${id}" src="https://via.placeholder.com/250x220?text=${encodeURIComponent(c.cargo)}" style="background:#222">
+    <div class="player-info" style="background:#111;color:#ffcc00">
+      <input type="file" accept="image/*" onchange="document.getElementById('foto-${id}').src=URL.createObjectURL(this.files[0])" style="font-size:10px;color:white"><br>
+      <h3 style="color:#ffcc00;margin-top:8px">${c.cargo}</h3>
+      <p style="margin:0;color:#fff;font-size:14px">${c.nombre}</p>
+      <p style="margin:5px 0;color:#aaa;font-size:12px">${c.dorsal}</p>
+      <button class="btn-more" style="background:#ffcc00;color:#111" onclick="verDirectivo(${id},'${c.cargo}')">Más Información</button>
+    </div>`;
+  gridDirectiva.appendChild(div);
+});
+
+function verDirectivo(num,cargo){
+  document.getElementById('modalContent').innerHTML=`
+    <img src="${document.getElementById('foto-'+num).src}" style="width:120px;height:120px;border-radius:50%;object-fit:cover;border:4px solid #111"><br>
+    <h2 style="color:#111">${cargo}</h2>
+    <p><b>Nombre:</b> (Escribe el nombre real aquí)<br><b>Función:</b> ${cargo}<br><b>Contacto:</b> +240 XXX XXX<br><b>Desde:</b> 2024</p>
+    <p style="font-size:13px">Biografía y responsabilidades de esta persona dentro del club. Qué hace, su experiencia...</p>
+    <button onclick="document.getElementById('modal').style.display='none'" style="background:#111;color:#ffcc00;border:none;padding:10px 20px;border-radius:20px;cursor:pointer;margin-top:10px">Cerrar</button>
+  `;
+  document.getElementById('modal').style.display='flex';
+}
+</script>
+
+  <div id="equipajes" class="card">
+    <h2>👕 Nuestros Equipajes</h2>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:15px">
+      <div style="border:2px solid #111;border-radius:12px;padding:15px;text-align:center"><h3>Equipaje Local</h3><p>Camiseta Negra con detalles Amarillos</p><input type="file" accept="image/*" onchange="preview(event,'eq1')"><br><img id="eq1" style="width:100%;margin-top:10px;border-radius:8px"></div>
+      <div style="border:2px solid #ffcc00;border-radius:12px;padding:15px;text-align:center;background:#111;color:#ffcc00"><h3>Equipaje Visitante</h3><p>Camiseta Amarilla con detalles Negros</p><input type="file" accept="image/*" onchange="preview(event,'eq2')"><br><img id="eq2" style="width:100%;margin-top:10px;border-radius:8px"></div>
+    </div>
+  </div>
+
+  <div id="jugadores" class="card">
+    <h2>⚽ Plantilla Oficial - 30 Jugadores</h2>
+    <p>Click en Más Información para ver detalles de cada jugador</p>
+    <div class="grid-players" id="plantilla"></div>
+  </div>
+
+</div>
+</div>
+
+<div id="modal" class="modal" onclick="this.style.display='none'"><div class="modal-content" id="modalContent"></div></div>
+
+<script>
+const CONTRASEÑA="Viboras2026";
+function entrar(){
+  if(document.getElementById('pass').value===CONTRASEÑA){
+    document.getElementById('login').style.display='none';
+    document.getElementById('contenido').style.display='block';
+  }else{document.getElementById('error').style.display='block';}
+}
+function preview(e,id){document.getElementById(id).src=URL.createObjectURL(e.target.files[0]);}
+
+// GENERAR 30 JUGADORES AUTOMÁTICAMENTE
+const plantilla = document.getElementById('plantilla');
+for(let i=1;i<=30;i++){
+  let pos = ["Portero","Defensa","Medio","Delantero"][i%4];
+  let div = document.createElement('div');
+  div.className='player';
+  div.innerHTML=`
+    <img id="foto-${i}" src="https://via.placeholder.com/250x220?text=Jugador+${i}" style="background:#ddd">
+    <div class="player-info">
+      <input type="file" accept="image/*" onchange="document.getElementById('foto-${i}').src=URL.createObjectURL(this.files[0])" style="font-size:10px"><br>
+      <h3>Jugador ${i}</h3>
+      <p style="margin:0;color:#666">${pos} - Dorsal ${i}</p>
+      <p style="font-size:13px;margin-top:5px">Nombre completo y edad aquí...</p>
+      <button class="btn-more" onclick="verMas(${i},'${pos}')">Más Información</button>
+    </div>`;
+  plantilla.appendChild(div);
+}
+
+function verMas(num,pos){
+  document.getElementById('modalContent').innerHTML=`
+    <img src="${document.getElementById('foto-'+num).src}" style="width:120px;height:120px;border-radius:50%;object-fit:cover;border:3px solid #ffcc00"><br>
+    <h2>Jugador ${num}</h2>
+    <p><b>Posición:</b> ${pos}<br><b>Dorsal:</b> ${num}<br><b>Edad:</b> 22 años<br><b>Goles:</b> 5<br><b>Partidos:</b> 18</p>
+    <p style="font-size:13px">Aquí puedes poner la biografía completa del jugador, su historia, estadísticas, etc.</p>
+    <button onclick="document.getElementById('modal').style.display='none'" style="background:#111;color:#ffcc00;border:none;padding:10px 20px;border-radius:20px;cursor:pointer;margin-top:10px">Cerrar</button>
+  `;
+  document.getElementById('modal').style.display='flex';
+}
+</script> 
+
+<footer style="background:#111;color:#ffcc00;padding:40px 20px;text-align:center;border-top:4px solid #ffcc00;margin-top:40px">
+  <div style="max-width:1100px;margin:0 auto">
+    
+    
+    <div style="margin:20px 0;display:flex;justify-content:center;gap:20px;flex-wrap:wrap;font-size:14px;color:#ccc">
+      <span>📍 Mbam, Kie-Ntem - Guinea Ecuatorial</span>
+      <span>📞 +240 222 419 390</span>
+      <span>📧 viborasnegras@email.com</span>
+    </div>
+
+    
+
+    <p style="margin-top:25px;color:#888;font-size:12px;border-top:1px solid #333;padding-top:15px">
+      © 2026 Víboras Negras de Mbam CDO - Todos los derechos reservados<br>
+      Página privada del equipo - Acceso con contraseña
+    </p>
+  </div>
+</footer>
+    
+</body>
+</html>
